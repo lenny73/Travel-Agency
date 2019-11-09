@@ -1,0 +1,354 @@
+/* Leonid Suchkov */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* wrapping elements after main background content to make margins from borders other content */
+.wrap {
+  margin: 20px;
+}
+/*Create my navigation bar*/
+/* for navigation used float */
+.nav {
+  list-style: none;
+  width: 100%;
+  padding-top: 10px;
+  position: fixed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.nav li {
+  float: left;
+  width: 20%;
+  height: 65px;
+  text-align: center;
+
+}
+.nav li a {
+  padding:0 0 0 0 ;
+  margin:0 0 0 0 ;
+  width: 100%;
+  /* display: block; */
+  height: 100%;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 2s background-color;
+  color: grey;
+  border-radius: 12px;
+  list-style-type: none;
+}
+.nav li a:hover {
+  margin-top: 0px;
+  background-color: gray;
+  color: #ddeeee;
+  border: 20px;
+  padding: 0px;
+}
+ul {
+  list-style: none;
+}
+.logo {
+  width: 60px;
+}
+/*-------------------------------------------  */
+/* Create heading, paragraphs and other elements  */
+h1 {
+  text-align: center;
+  font-size: 5em;
+  padding-top: 10%;
+  padding-bottom: 20px;
+  color: white;
+  font-weight: 300;
+}
+h2 {
+  font-size: 150%;
+  font-weight: 700;
+  padding-bottom: 20px;
+  color: pureblack;
+  text-align: center;
+  margin: 20px;
+  font-family: 'Muli', sans-serif;
+}
+h2:after {
+  display: block;
+  content: "";
+  border: 1px solid black;
+  width: 250px;
+  height: 0px;
+  margin: 10px auto;
+}
+h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+p {
+  font-size: 110%;
+  padding: 32p 50px;
+  color: #505054;
+  line-height: 35px;
+  text-align: center;
+  margin: 30px;
+  font-family: 'sniglet', cursive;
+
+}
+.button {
+  display: flex;
+  justify-content: center;
+  color: grey;
+  text-align: center;
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: 25px;
+  transition: 2s background-color;
+  float: right;
+  margin: 60px;
+  border-radius: 10px;
+  font-family: 'Muli', sans-serif;
+}
+
+.btn {
+  font-size: 15px;
+  margin: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  border: -2px solid #d1d1d1;
+  color: #000;
+  font-family: 'Muli', sans-serif;
+}
+/* ------------------------------------------- */
+/* my main content blocks */
+/* my main background img and  */
+.main-content {
+  padding-top: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/main.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 610px;
+}
+.main-gallery{
+  padding-top: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 610px;
+  margin:10px;
+}
+.main-content h2 {
+  margin-top: 100px;
+  color: white;
+}
+/* --------------------------------------------------- */
+.info {
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  background-color: #f4f4f4;
+  padding-bottom: 20px;
+  padding-top: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/backmain.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 610px;
+}
+/* used flexboxes to create Hotels option and added shadows to highlight elements */
+.row {
+  display: flex;
+  /* width: 100%; */
+  }
+.row div {
+  border: 1px #ccc solid;
+}
+/*Size pictures in Hotel options */
+.img-container img {
+  width: 100%;
+  height: 280px;
+}
+.column1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.column2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.column3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.column1 p {
+  font-size: 16px;
+}
+.column2 p {
+  font-size: 100%;
+}
+.column3 p {
+  font-size: 1em;
+}
+form {
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  border-radius: 10px;
+}
+/* ------------------------------------------------- */
+/* sizing logos and put inline amenities */
+.amenities {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+.amenities li {
+  display: inline-flex;
+  margin: 0 20px 0px 20px;
+}
+ol {
+  list-style: none;
+  margin: 0, 0, 0, 0;
+}
+.log {
+  width: 35px;
+}
+/* create additional services used float for pictures and description */
+.clearfix {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* declare sizes of pics in container */
+.container img {
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+}
+.container {
+  float: left;
+  width: 32.8%;
+  height: 280px;
+  margin: 3px;
+}
+/*  */
+.container img:hover {
+  opacity: 0.9;
+}
+/* transition effect when hover to pics */
+.container :hover {
+  transform: scale(1.02);
+  transition-duration: 1s;
+}
+/* --------------------------------------------------- */
+.box h3 p {
+  margin-top: 40px;
+}
+.box {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  height: 400px;
+  background-color: white;
+}
+.box img {
+  width: 100%;
+  height: 400px;
+}
+/* ------------------------------------------------ */
+/* create footer and social links */
+.footer {
+  position: inherit;
+  bottom: 0;
+  width: 100%;
+  color: pureblack;
+  text-align: center;
+  height: 100px;
+}
+.social li {
+  text-align: center;
+  display: inline-flex;
+}
+.fa {
+  padding: 13px;
+  font-size: 20px;
+  width: 44px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa-facebook {
+  color: black;
+}
+.fa-youtube {
+  color: black;
+}
+.fa-instagram {
+  color: black;
+}
+.fa-google {
+  color: black;
+}
+.fa-linkedin {
+  color: black;
+}
+.form-wrap{
+  display: block;
+}
+.form-wrap label {
+  margin: 5px 10px 5px 0;
+}
+.form-wrap input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px 40px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.form-wrap button {
+  padding: 10px 40px;
+  background-color: lightgray;
+  border: 1px solid gray;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.form-wrap button a{
+  text-decoration: none;
+  color:black;
+
+
+}
+
+.form-wrap button:hover {
+  background-color: gray;
+}
+
+
+/* ---------------------------------------------------------- */
+/* create return button */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 30px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: lightgray;
+  color: gray;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
